@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claims-forge"
+version = "0.1.0"
+description = "Page-grounded scientific claim extraction pipeline for the Claims competition"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.10,<3", "pypdf>=5,<7", "fonttools>=4.55,<5"]
+
+[project.scripts]
+claims-forge = "claims_forge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
